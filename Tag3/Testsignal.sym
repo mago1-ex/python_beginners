@@ -1,0 +1,49 @@
+FormatVersion=5.0 // Do not edit!
+Title="Testsignal"
+
+{SENDRECEIVE}
+
+[IntegriererParameterInput]
+ID=301h
+DLC=4
+Var=ArbeitsgeschwindigkeitInput unsigned 16,16 /f:0.01 /d:0
+Var=ArbeitsbreiteInput unsigned 0,16 /f:0.01 /d:0
+
+[IntegriererSollwerteInput]
+ID=300h
+DLC=8
+Var=Ausbringmenge_rechts_Input unsigned 32,32 /f:0.1 /d:0
+Var=Ausbringmenge_links_Input unsigned 0,32 /f:0.1 /d:0
+
+[Geschwindigkeiten]
+ID=202h
+DLC=7
+Var=Reset signed 48,8
+Var=Bandboden_geschw_Istwert unsigned 32,16 /f:0.1 /d:0
+Var=Bandboden_geschwindigkeit unsigned 16,16 /f:0.01 /d:0
+Var=Geschwindigkeit unsigned 0,16 /f:0.1 /d:0
+
+[Sollwerte]
+ID=201h
+DLC=8
+Var=ReglerOutPWM signed 32,32
+Var=Sollwert_rechts unsigned 16,16 /f:0.01 /d:0
+Var=Sollwert_links unsigned 0,16 /f:0.01 /d:0
+
+[TestStart]
+ID=102h
+DLC=1
+Var=Start_Stop signed 0,8 /min:0 /max:1
+
+[Testsignal_1]
+ID=100h	// CAN0
+DLC=8
+Var=Arbeitsbreite unsigned 0,16 /f:0.01 /d:0
+Var=Arbeitsgeschwindigkeit_Frequenz unsigned 48,16
+
+[Testsignal_2]
+ID=101h	// CAN0
+DLC=8
+Var=Ausbringmenge_links unsigned 0,32 /f:0.1 /d:0
+Var=Ausbringmenge_rechts unsigned 32,32 /f:0.1 /d:0
+

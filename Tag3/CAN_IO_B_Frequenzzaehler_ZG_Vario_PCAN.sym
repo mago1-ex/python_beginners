@@ -1,0 +1,22 @@
+FormatVersion=5.0 // Do not edit!
+UniqueVariables=True
+Title="CAN_IO_B_Frequenzzaehler_ZG_Vario_PCAN"
+
+{RECEIVE}
+
+[MSG_ANA_3_5]
+ID=333h
+DLC=8
+CycleTime=100
+Var=s_ANA3 unsigned 0,16 /u:Hz
+Var=s_Temp_T_ANA4 unsigned 16,16 /u:°C /f:0.0125 /o:-25
+Var=s_Schlupf_Bandboden_ANA5 unsigned 32,16 /u:cm/sec /f:0.001
+
+[MSG_ANA_0_2]
+ID=344h
+DLC=8
+CycleTime=100
+Var=s_Druck_P_ANA_0 unsigned 0,16 /u:bar /f:0.0625 /o:-31.25
+Var=s_Druck_T_ANA1 unsigned 16,16 /u:bar /f:0.0625 /o:-31.25
+Var=s_Temp_P_ANA2 unsigned 32,16 /u:°C /f:0.0125 /o:-25
+

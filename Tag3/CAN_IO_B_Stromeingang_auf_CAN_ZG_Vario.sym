@@ -1,0 +1,22 @@
+FormatVersion=5.0 // Do not edit!
+UniqueVariables=True
+Title="CAN_IO_B_Stromsensor_auf_CAN_PCAN"
+
+{RECEIVE}
+
+[MSG_ANA_0_bis_2]
+ID=312h
+DLC=8
+CycleTime=100
+Var=s_Zugoese_ANA0 unsigned 0,16 /u:kg /f:0.25492875 /o:-1019.715
+Var=s_Gewicht_Achse_ANA1 unsigned 16,16 /u:mA /f:0.001
+Var=s_DFM_ANA2 unsigned 32,16 /u:l/min /f:3.75 /o:-15
+
+[MSG_ANA_3_bis_5]
+ID=322h
+DLC=8
+CycleTime=100
+Var=s_Poti_Deichsel_ANA3 unsigned 0,16 /u:mV
+Var=s_ANA4 unsigned 16,16
+Var=s_ANA5 unsigned 32,16
+
